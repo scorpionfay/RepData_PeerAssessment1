@@ -1,7 +1,7 @@
-#Reproducible Research: Peer Assessment 1
+# Reproducible Research: Peer Assessment 1
 #### Author: Diqing Fei
 
-###1. Loading and preprocessing the data
+### 1. Loading and preprocessing the data
 
 ```r
 filename <- "activity.csv"
@@ -16,7 +16,7 @@ activity <- read.csv(filename)
 activity$date <- as.Date(activity$date)
 ```
 
-###2. What is mean total number of steps taken per day?
+### 2. What is mean total number of steps taken per day?
 
 
 ```r
@@ -46,7 +46,7 @@ The mean number of steps taken per day is 9354.2295082.
 The median number of steps taken per day is 10395.
 
 
-###3. What is the average daily activity pattern?
+### 3. What is the average daily activity pattern?
 
 
 ```r
@@ -68,7 +68,7 @@ avgstep[which.max(avgstep$steps),]
 
 The 5-min interval 835 on average across all the days in the dataset, contains the maximum number of steps 206.1698113.
 
-###4. Imputing missing values
+### 4. Imputing missing values
 
 
 ```r
@@ -139,7 +139,7 @@ median(step_per_daya)
 The mean number of steps taken per day is 1.0766189\times 10^{4}.
 The median number of steps taken per day is 1.0766189\times 10^{4}.
 
-###5. Are there differences in activity patterns between weekdays and weekends?
+### 5. Are there differences in activity patterns between weekdays and weekends?
 
 ```r
 activityna$weekday <- weekdays(activityna$date)
